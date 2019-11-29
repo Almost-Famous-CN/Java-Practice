@@ -25,7 +25,7 @@ public class HashMap<K, V> extends AbstractMap<K, V> implements Map<K, V>, Clone
 
 
     // Node 哈希桶
-    transient Node<K, V>[] table;
+    transient Node[] table;
 
     // 负载因子
     final float loadFactor;
@@ -70,7 +70,7 @@ public class HashMap<K, V> extends AbstractMap<K, V> implements Map<K, V>, Clone
     }
 
     final public V put(K key, V value){
-        int n, i;
+        Node<K,V>[] newTable; Node<K,V> node; int n, i;
         if(table == null || table.length == 0){
             n = (table = resize()).length;
         }
