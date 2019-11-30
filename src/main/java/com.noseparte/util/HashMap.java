@@ -23,6 +23,7 @@ public class HashMap<K, V> extends AbstractMap<K, V> implements Map<K, V>, Clone
     // 链表转红黑树的阈值
     static final int TREEIFY_THRESHOLD = 8;
 
+    transient int modCount;
 
     // Node 哈希桶
     transient Node[] table;
@@ -55,7 +56,7 @@ public class HashMap<K, V> extends AbstractMap<K, V> implements Map<K, V>, Clone
         threshold = tableSizeFor(initialCapacity);
     }
 
-    static final int tableSizeFor(int cap) {
+    private static int tableSizeFor(int cap) {
         int n = cap - 1;
         n |= n >>> 1;
         n |= n >>> 2;
@@ -69,14 +70,149 @@ public class HashMap<K, V> extends AbstractMap<K, V> implements Map<K, V>, Clone
         return null;
     }
 
-    final public V put(K key, V value){
-        Node<K,V>[] newTable; Node<K,V> node; int n, i;
-        if(table == null || table.length == 0){
-            n = (table = resize()).length;
+    /**
+     * 调用层 HashMap插入k-V键值对
+     *
+     * @param key key键
+     * @param value value值
+     * @return V
+     */
+    public V put(K key, V value) {
+        return putVal(hash(key), key, value, false, true);
+    }
+
+    /**
+     * 实现层 HashMap插入k-V键值对的底层实现
+     *
+     * @param hash key对应的hash值
+     * @param key   key键
+     * @param value value值
+     * @param onlyIfAbsent 如果为true, 不改变现存的值
+     * @param evict 如果为false，会新创建一个
+     * @return
+     */
+    final public V putVal(int hash, K key, V value, boolean onlyIfAbsent,
+                          boolean evict) {
+        Node<K, V>[] newTable;
+        Node<K, V> node;
+        int n, i;
+        /** table是否为空, 或者长度是否为0 */
+        if ((newTable = table) == null || (n = newTable.length) == 0)
+            // 扩容
+            n = (newTable = resize()).length;
+        // 根据键值key计算hash值得到插入得到的数组索引 i
+        if ((node = newTable[i = (n - 1) & hash]) == null) {
+            // 如果为空, 直接插入
+            newTable[i] = newNode(hash, key, value, null);
+        } else {
+            Node<K, V> e;
+            K k;
+            // 通过校验key与key的hash值
+            if (node.hash == hash &&
+                    ((k = node.key) == key || (key != null && key.equals(k)))) {
+                // 存在则直接插入
+                e = node;
+                // table[i]是否为树节点
+            } else if (node instanceof TreeNode) {
+                // 红黑树直接插入键值对
+                e = ((TreeNode<K, V>) node).putTreeVal(this, newTable, hash, key, value);
+            } else {
+                // 开始遍历链表准备插入
+                for (int binCount = 0; ; ++binCount) {
+                    if ((e = node.next) == null) {
+                        node.next = newNode(hash, key, value, null);
+                        // 链表长度是否大于8
+                        if (binCount >= TREEIFY_THRESHOLD - 1)
+                            // 转为红黑树，插入键值对
+                            treeifyBin(newTable, hash);
+                        break;
+                    }
+                    // 链表插入，若key存在则直接替换value
+                    if (e.hash == hash &&
+                            ((k = e.key) == key || (key != null && key.equals(k))))
+                        break;
+                    node = e;
+                }
+            }
+            if (e != null) {
+                V oldValue = e.value;
+                if (!onlyIfAbsent || oldValue == null) {
+                    e.value = value;
+                }
+                afterNodeAccess(e);
+                return oldValue;
+            }
         }
-
-
+        ++modCount;
+        // 判断是否需要扩容
+        if (++size > threshold)
+            resize();
+        afterNodeInsertion(evict);
         return null;
+    }
+
+    private void afterNodeInsertion(boolean evict) {
+
+    }
+
+    private void afterNodeAccess(Node<K,V> e) {
+    }
+
+    private void treeifyBin(Node<K,V>[] newTable, int hash) {
+
+    }
+
+    /**
+     * 通过key获取value  k-v
+     * @param key key值
+     * @return value
+     */
+    public V get(Object key) {
+        Node<K,V> e;
+        return (e = getNode(hash(key), key)) == null ? null : e.value;
+    }
+
+    /**
+     * 查找HashMap中的某个K-V的底层实现
+     * @param hash node#hash值
+     * @param key node#key值
+     * @return
+     */
+    private final Node<K,V> getNode(int hash, Object key) {
+        Node<K,V>[] tab; Node<K,V> first, e; int n; K k;
+        if ((tab = table) != null && (n = tab.length) > 0 &&
+                (first = tab[(n - 1) & hash]) != null) {
+            if (first.hash == hash && // always check first node
+                    ((k = first.key) == key || (key != null && key.equals(k))))
+                return first;
+            if ((e = first.next) != null) {
+                if (first instanceof TreeNode)
+                    return ((TreeNode<K,V>)first).getTreeNode(hash, key);
+                do {
+                    /**
+                     * 寻Node
+                     * @param hash Node对应的hash值
+                     * @param key 判断key是否相同
+                     * @return Node
+                     */
+                    if (e.hash == hash &&
+                            ((k = e.key) == key || (key != null && key.equals(k))))
+                        return e;
+                } while ((e = e.next) != null);
+            }
+        }
+        return null;
+    }
+
+    /**
+     * Hash算法 取key的hashCode值、高位运算、取模运算。
+     *
+     * @param key key键
+     * @return
+     */
+    static final int hash(Object key) {
+        int h;
+        return (key == null) ? 0 : (h = key.hashCode()) ^ (h >>> 16);
     }
 
     /**
@@ -89,7 +225,7 @@ public class HashMap<K, V> extends AbstractMap<K, V> implements Map<K, V>, Clone
      *     位运算 c为自然常数
      *     c << 1  ==> 2c
      *     c << 2  ==> 4c
- *     <p/>
+     * <p/>
      * @return
      */
     final Node<K, V>[] resize(){
@@ -174,6 +310,10 @@ public class HashMap<K, V> extends AbstractMap<K, V> implements Map<K, V>, Clone
         return newTable;
     }
 
+    // Create a regular (non-tree) node
+    Node<K,V> newNode(int hash, K key, V value, Node<K, V> next) {
+        return new Node<K, V>(hash, key, value, next);
+    }
 
     /**
      * @Auther: Noseparte
@@ -208,6 +348,8 @@ public class HashMap<K, V> extends AbstractMap<K, V> implements Map<K, V>, Clone
             value = newValue;
             return oldValue;
         }
+
+
     }
 
     /**
@@ -232,6 +374,34 @@ public class HashMap<K, V> extends AbstractMap<K, V> implements Map<K, V>, Clone
 
         }
 
+        /**
+         * 得到树节点
+         *
+         * @param hash key的hash值
+         * @param key key键
+         * @return
+         */
+        TreeNode<K, V> getTreeNode(int hash, Object key) {
+            return ((parent != null) ? root() : this).find(hash, key, null);
+        }
+
+        final TreeNode<K,V> find(int h, Object k, Class<?> kc) {
+            // 略 感兴趣请查看源码
+            return null;
+        }
+
+        final TreeNode<K,V> root() {
+            for (TreeNode<K,V> r = this, p;;) {
+                if ((p = r.parent) == null)
+                    return r;
+                r = p;
+            }
+        }
+
+        Node<K,V> putTreeVal(HashMap<K, V> kvHashMap, Node<K, V>[] newTable, int hash, K key, V value) {
+            // 红黑树直接插入键值对
+            return null;
+        }
     }
 
 }

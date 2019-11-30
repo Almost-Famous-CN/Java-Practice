@@ -16,59 +16,70 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com.noseparte/util/HashMap.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="213" column="25" lean-forward="true" selection-start-line="213" selection-start-column="25" selection-end-line="213" selection-end-column="25" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#836#837#0" expanded="true" />
-                <element signature="e#880#881#0" expanded="true" />
-                <element signature="e#922#923#0" expanded="true" />
-                <element signature="e#980#981#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="jar://D:/Java/jdk1.8/src.zip!/java/util/HashMap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="725">
-              <caret line="632" column="29" lean-forward="true" selection-start-line="632" selection-start-column="29" selection-end-line="632" selection-end-column="29" />
+            <state relative-caret-position="856">
+              <caret line="763" column="27" lean-forward="true" selection-start-line="763" selection-start-column="27" selection-end-line="763" selection-end-column="27" />
               <folding>
                 <element signature="e#19327#19328#0" expanded="true" />
                 <element signature="e#19410#19411#0" expanded="true" />
                 <element signature="e#24331#24332#0" expanded="true" />
                 <element signature="e#24396#24397#0" expanded="true" />
+                <element signature="e#66928#66929#0" expanded="true" />
+                <element signature="e#66985#66986#0" expanded="true" />
+                <element signature="e#71651#71652#0" expanded="true" />
+                <element signature="e#71733#71734#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/HashMap.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="480">
-                <caret line="32" column="53" lean-forward="true" selection-start-line="32" selection-start-column="53" selection-end-line="32" selection-end-column="53" />
+              <first_editor relative-caret-position="361">
+                <caret line="45" column="16" lean-forward="true" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="16" />
                 <folding>
-                  <element signature="e#696#697#0" expanded="true" />
-                  <element signature="e#740#741#0" expanded="true" />
-                  <element signature="e#781#782#0" expanded="true" />
-                  <element signature="e#839#840#0" expanded="true" />
-                  <element signature="e#1485#1486#0" expanded="true" />
-                  <element signature="e#1512#1513#0" expanded="true" />
-                  <element signature="e#2020#2021#0" expanded="true" />
-                  <element signature="e#2054#2055#0" expanded="true" />
-                  <element signature="e#2090#2091#0" expanded="true" />
-                  <element signature="e#2126#2127#0" expanded="true" />
-                  <element signature="e#2689#2690#0" expanded="true" />
-                  <element signature="e#2742#2743#0" expanded="true" />
+                  <element signature="e#718#719#0" expanded="true" />
+                  <element signature="e#762#763#0" expanded="true" />
+                  <element signature="e#803#804#0" expanded="true" />
+                  <element signature="e#861#862#0" expanded="true" />
+                  <element signature="e#1509#1510#0" expanded="true" />
+                  <element signature="e#1536#1537#0" expanded="true" />
+                  <element signature="e#2056#2057#0" expanded="true" />
+                  <element signature="e#2117#2118#0" expanded="true" />
+                  <element signature="e#430#431#0" expanded="true" />
+                  <element signature="e#456#457#0" expanded="true" />
+                  <element signature="e#488#489#0" expanded="true" />
+                  <element signature="e#516#517#0" expanded="true" />
+                  <element signature="e#347#348#0" expanded="true" />
+                  <element signature="e#392#393#0" expanded="true" />
+                  <element signature="n#!!doc" expanded="true" />
+                  <element signature="e#177#178#0" expanded="true" />
+                  <element signature="e#242#243#0" expanded="true" />
+                  <element signature="n#!!doc" expanded="true" />
+                  <element signature="n#!!doc" expanded="true" />
                 </folding>
               </first_editor>
               <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com.noseparte/util/HashMap.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="470">
+              <caret line="215" column="5" lean-forward="true" selection-start-line="206" selection-start-column="4" selection-end-line="215" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1833#1834#0" expanded="true" />
+                <element signature="e#1898#1899#0" expanded="true" />
+                <element signature="e#9911#9912#0" expanded="true" />
+                <element signature="e#9972#9973#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -120,6 +131,13 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>HashMap</find>
+      <find>root</find>
+      <find>root()</find>
+      <find>TREEIFY_THRESHOLD</find>
+      <find>getTreeNode</find>
+      <find>afterNodeInsertion</find>
+      <find>sp</find>
+      <find>treeifyBin</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -133,10 +151,15 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/operator-java.md" />
         <option value="$PROJECT_DIR$/meituan-java.md" />
-        <option value="$PROJECT_DIR$/HashMap.md" />
         <option value="$PROJECT_DIR$/src/main/java/com.noseparte/util/HashMap.java" />
+        <option value="$PROJECT_DIR$/HashMap.md" />
       </list>
     </option>
+  </component>
+  <component name="JsbtTreeLayoutManager">
+    <layout place="tools.popupGrunt">
+      <scroll-view-position x="0" y="0" />
+    </layout>
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -161,7 +184,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -170,16 +192,28 @@
               <item name="Java-Practice" type="b2602c69:ProjectViewProjectNode" />
               <item name="Java-Practice" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Java-Practice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Java-Practice" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Java-Practice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Java-Practice" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1574912614647" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1575107860376" />
     <property name="last_opened_file_path" value="F:/chrome/downland/occ-develop" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -263,7 +297,8 @@
       <workItem from="1573781366683" duration="69000" />
       <workItem from="1574907039490" duration="663000" />
       <workItem from="1574917455812" duration="2330000" />
-      <workItem from="1575005481080" duration="8189000" />
+      <workItem from="1575005481080" duration="8218000" />
+      <workItem from="1575077796367" duration="16895000" />
     </task>
     <task id="LOCAL-00001" summary="=/ Java-Practice 项目 initialize">
       <created>1570524161287</created>
@@ -307,11 +342,25 @@
       <option name="project" value="LOCAL" />
       <updated>1574907093336</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="=/ 美团 Java面试题汇总">
+      <created>1575023392598</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1575023392598</updated>
+    </task>
+    <task id="LOCAL-00008" summary="=/ HashMap 引入局部变量是用来优化">
+      <created>1575102309702</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1575102309702</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113824000" />
+    <option name="totallyTimeSpent" value="130748000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -333,7 +382,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49946696" weight="0.23752712" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49946696" visible="true" weight="0.23752712" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50053304" side_tool="true" weight="0.28958786" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.329718" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -388,7 +437,8 @@
     <MESSAGE value="=/ HashMap之put方法流程示意图" />
     <MESSAGE value="=/ jdk7、8的HashMap的结构示意图" />
     <MESSAGE value="=/ 美团 Java面试题汇总" />
-    <option name="LAST_COMMIT_MESSAGE" value="=/ 美团 Java面试题汇总" />
+    <MESSAGE value="=/ HashMap 引入局部变量是用来优化" />
+    <option name="LAST_COMMIT_MESSAGE" value="=/ HashMap 引入局部变量是用来优化" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/README.md">
@@ -452,6 +502,16 @@
     <entry file="file://$PROJECT_DIR$/static/images/data-structure.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/meituan-java.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="600">
+            <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/static/images/put.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -472,16 +532,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/meituan-java.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="600">
-            <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Java-Practice.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
@@ -489,54 +539,68 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HashMap.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="480">
-            <caret line="32" column="53" lean-forward="true" selection-start-line="32" selection-start-column="53" selection-end-line="32" selection-end-column="53" />
-            <folding>
-              <element signature="e#696#697#0" expanded="true" />
-              <element signature="e#740#741#0" expanded="true" />
-              <element signature="e#781#782#0" expanded="true" />
-              <element signature="e#839#840#0" expanded="true" />
-              <element signature="e#1485#1486#0" expanded="true" />
-              <element signature="e#1512#1513#0" expanded="true" />
-              <element signature="e#2020#2021#0" expanded="true" />
-              <element signature="e#2054#2055#0" expanded="true" />
-              <element signature="e#2090#2091#0" expanded="true" />
-              <element signature="e#2126#2127#0" expanded="true" />
-              <element signature="e#2689#2690#0" expanded="true" />
-              <element signature="e#2742#2743#0" expanded="true" />
-            </folding>
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://D:/Java/jdk1.8/src.zip!/java/util/HashMap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="725">
-          <caret line="632" column="29" lean-forward="true" selection-start-line="632" selection-start-column="29" selection-end-line="632" selection-end-column="29" />
+        <state relative-caret-position="856">
+          <caret line="763" column="27" lean-forward="true" selection-start-line="763" selection-start-column="27" selection-end-line="763" selection-end-column="27" />
           <folding>
             <element signature="e#19327#19328#0" expanded="true" />
             <element signature="e#19410#19411#0" expanded="true" />
             <element signature="e#24331#24332#0" expanded="true" />
             <element signature="e#24396#24397#0" expanded="true" />
+            <element signature="e#66928#66929#0" expanded="true" />
+            <element signature="e#66985#66986#0" expanded="true" />
+            <element signature="e#71651#71652#0" expanded="true" />
+            <element signature="e#71733#71734#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com.noseparte/util/HashMap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="213" column="25" lean-forward="true" selection-start-line="213" selection-start-column="25" selection-end-line="213" selection-end-column="25" />
+        <state relative-caret-position="470">
+          <caret line="215" column="5" lean-forward="true" selection-start-line="206" selection-start-column="4" selection-end-line="215" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#836#837#0" expanded="true" />
-            <element signature="e#880#881#0" expanded="true" />
-            <element signature="e#922#923#0" expanded="true" />
-            <element signature="e#980#981#0" expanded="true" />
+            <element signature="e#1833#1834#0" expanded="true" />
+            <element signature="e#1898#1899#0" expanded="true" />
+            <element signature="e#9911#9912#0" expanded="true" />
+            <element signature="e#9972#9973#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/images/optimize.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HashMap.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="361">
+            <caret line="45" column="16" lean-forward="true" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="16" />
+            <folding>
+              <element signature="e#718#719#0" expanded="true" />
+              <element signature="e#762#763#0" expanded="true" />
+              <element signature="e#803#804#0" expanded="true" />
+              <element signature="e#861#862#0" expanded="true" />
+              <element signature="e#1509#1510#0" expanded="true" />
+              <element signature="e#1536#1537#0" expanded="true" />
+              <element signature="e#2056#2057#0" expanded="true" />
+              <element signature="e#2117#2118#0" expanded="true" />
+              <element signature="e#430#431#0" expanded="true" />
+              <element signature="e#456#457#0" expanded="true" />
+              <element signature="e#488#489#0" expanded="true" />
+              <element signature="e#516#517#0" expanded="true" />
+              <element signature="e#347#348#0" expanded="true" />
+              <element signature="e#392#393#0" expanded="true" />
+              <element signature="n#!!doc" expanded="true" />
+              <element signature="e#177#178#0" expanded="true" />
+              <element signature="e#242#243#0" expanded="true" />
+              <element signature="n#!!doc" expanded="true" />
+              <element signature="n#!!doc" expanded="true" />
+            </folding>
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
